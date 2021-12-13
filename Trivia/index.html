@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+
+            document.addEventListener("DOMContentLoaded", function() {
+
+                // Changing button background-color
+                document.querySelectorAll(".choice-btn").forEach(function(btn) {
+                    btn.addEventListener("click", function() {
+
+                        document.querySelectorAll(".choice-btn").forEach(function(e) {
+                            e.style.backgroundColor = "#d9edff";
+                            e.style.border = "1px solid #d9edff";
+                        });
+
+                        if (btn.id == "right") {
+                            btn.style.backgroundColor = "#2ecc71";
+                            btn.style.border = "1px solid #2ecc71";
+                            document.querySelector("#correct").style.display = "block";
+                            document.querySelector("#incorrect").style.display = "none";
+                        }
+
+                        else {
+                            btn.style.backgroundColor = "#e74c3c";
+                            btn.style.border = "1px solid #e74c3c";
+                            document.querySelector("#incorrect").style.display = "block";
+                            document.querySelector("#correct").style.display = "none";
+                        }
+                    })
+                })
+
+                // Handling answer of question 2
+                document.querySelector("form").addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    var answer = document.querySelector("#textanswer").value;
+                    if (answer.toLowerCase() == "the great pyramid" || answer.toLowerCase() == "great pyramid of giza") {
+                        document.querySelector("#textanswer").style.backgroundColor = "#2ecc71";
+                        document.querySelector("#textcorrect").style.display = "block";
+                        document.querySelector("#textincorrect").style.display = "none";
+                    }
+                    else {
+                        document.querySelector("#textanswer").style.backgroundColor = "#e74c3c";
+                        document.querySelector("#textincorrect").style.display = "block";
+                        document.querySelector("#textcorrect").style.display = "none";
+                    }
+                })
+
+                document.querySelector("#textanswer").addEventListener("keyup", function() {
+                    document.querySelector("#textanswer").style.backgroundColor = "#ecf0f1";
+                    document.querySelector("#textincorrect").style.display = "none";
+                    document.querySelector("#textcorrect").style.display = "none";
+                })
+            });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3 class="question">What is the capital of Egypt?</h3>
+                <p class="response" id="correct">Correct!</p>
+                <p class="response" id="incorrect">Incorrect!</p>
+                <div class="multiple-buttons">
+                    <button class="choice-btn" id="wrong">Damascus</button>
+                    <button class="choice-btn" id="right">Cairo</button>
+                    <button class="choice-btn" id="wrong">Tripoli</button>
+                </div>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3 class="question">Which of the seven wonders of the ancient world is located in Egypt?</h3>
+                <p class="response" id="textcorrect">Correct!</p>
+                <p class="response" id="textincorrect">Incorrect!</p>
+                <form>
+                    <input id="textanswer" type="text" autocomplete="off" placeholder="Answer">
+                    <input id="textsubmit" type="submit">
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>
