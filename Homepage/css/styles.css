@@ -1,0 +1,58 @@
+/* navbar styling */
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+.navbar {
+    margin: 1.5em 1em;
+    margin-bottom: 4em;
+    border-bottom: 2px solid rgba(53, 59, 72, 1.0);
+}
+.navbar-brand {
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3em;
+    padding: .5em;
+}
+
+.nav-item {
+    font-size: 1.25em;
+    background-color: rgba(130, 204, 221,.25) !important;
+    padding: 0em .5em;
+    margin: .3em;
+    max-width: fit-content !important;
+}
+
+/* Main section styling */
+.row {
+    margin: 0em .5em;
+}
+.card-title {
+    border-bottom: 3px solid rgba(229, 80, 57,1.0);
+    max-width: fit-content;
+}
+.card-text
+{
+    padding: .5em;
+    line-height: 2em;
+}
+mark {
+    background-color: rgba(130, 204, 221,.2);
+}
+
+/* Footer styling */
+footer {
+    color: rgba(245, 246, 250,1.0);
+    background-color: rgba(47, 54, 64,1.0);
+    padding: 3em 2em;
+}
+#scroll-top {
+    border-bottom: 3px solid rgba(229, 80, 57,1.0);
+}
+#scroll-top button {
+    color: rgba(245, 246, 250,1.0);
+    background-color: inherit;
+    border: none;
+}
+#scroll-top button:focus {
+    border: 0;
+    outline: 0;
+}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+    <h3 class="mb-3" id="update-password-head">Update password</h3>
+    <form class="needs-validation" novalidate id="update-password-form" action="/account" method="post">
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input autocomplete="off" required type="password" name="currentpassword" class="form-control" id="floatingInput" placeholder="Current password">
+          <label for="floatingInput">Current password</label>
+          <div class="invalid-feedback">
+            Please provide a valid input.
+          </div>
+        </div>
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input autocomplete="off" required type="password" name="newpassword" class="form-control" id="floatingInput" placeholder="New password">
+          <label for="floatingInput">New password</label>
+          <div class="invalid-feedback">
+            Please provide a valid input.
+          </div>
+        </div>
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input autocomplete="off" required type="password" name="confirmpassword" class="form-control" id="floatingInput" placeholder="Confirm password">
+          <label for="floatingInput">Confirm password</label>
+          <div class="invalid-feedback">
+            Please provide a valid input.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-50 mx-auto" id="update-password-button">Update password</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    
+    <form class="needs-validation" novalidate id="login-form" action="/login" method="post">
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input autocomplete="off" required type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
+          <label for="floatingInput">Username</label>
+          <div class="invalid-feedback">
+            Please provide a valid username.
+          </div>
+        </div>
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input autocomplete="off" required type="password" name="password" class="form-control" id="floatingInput" placeholder="Password">
+          <label for="floatingInput">Password</label>
+          <div class="invalid-feedback">
+            Please provide a valid password.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-50 mx-auto" id="login-button">Log In</button>
+    </form>
+{% endblock %}

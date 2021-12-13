@@ -1,0 +1,45 @@
+.contact{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+.contact-inline {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+}
+.contact-inline .form-floating {
+    flex-grow: 2 !important;
+    margin-right: .4em !important;
+}
+
+.contact-inline button {
+    flex-grow: 1;
+    background-color: $primcolor !important;
+    color: $seccolor !important;
+    border: none;
+    outline: none;
+}
+
+.contact-form input, .contact-form textarea {
+    background-color: $thdcolor !important;
+    color: $seccolor !important;
+    border: none;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.contact-form label {
+    color: $seccolor !important;
+
+}
+
+.contact h2 {
+    color: $primcolor;
+    font-size: 2.7em;
+    font-weight: 800;
+}

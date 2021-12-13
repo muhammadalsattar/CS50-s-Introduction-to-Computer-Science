@@ -1,0 +1,46 @@
+.projects{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+
+.projects h2 {
+    color: $primcolor;
+    font-size: 2.7em;
+    font-weight: 800;
+}
+
+.projects .card {
+    background-color: transparent !important;
+    border: none;
+}
+
+.projects .card-title mark, .projects .card-text mark {
+    color: $seccolor;
+    background-color: $primcolor;
+}
+
+.projects .card-footer {
+    background-color: transparent !important;
+    border: none;
+    padding-top: 0;
+}
+
+.projects .card-footer mark {
+    color: $seccolor;
+    background-color: $thdcolor;
+}
+
+.projects .row {
+    position: relative;
+    transition: ease-in;
+    animation-name: transition;
+    animation-duration: 1s;
+    animation-play-state: paused;
+    animation-iteration-count: 1;
+}
+
+@keyframes transition {
+    from {right: 100vw}
+    to {right: 0;}
+}

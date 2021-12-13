@@ -1,0 +1,31 @@
+body {
+    width: 100%;
+    color: $primcolor !important;
+    background-color: $seccolor !important;
+    font-family: $primfont !important;
+    position: absolute;
+    overflow-x: hidden !important;
+}
+
+@media only screen and (max-width: 585px) {
+    .intro h1{
+      font-size: 3.5em !important;
+    }
+    .contact .contact-inline{
+      flex-direction: column !important;
+    }
+    .contact-inline .form-floating{
+      width: 100% !important;
+      margin-right: 0 !important;
+      padding: 0 !important;
+      margin-bottom: 1em !important;
+    }
+    .contact-inline button {
+      padding: 1em 0;
+    }
+    .footer {
+      flex-direction: column !important;
+      justify-content: center;
+      align-items: center;
+    }
+  }

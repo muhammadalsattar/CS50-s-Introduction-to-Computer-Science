@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form class="needs-validation" novalidate id="buy-form" method="POST" action="/buy">
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input type="text" required name="symbol" class="form-control" id="floatingInput" placeholder="Symbol">
+          <label for="floatingInput">Symbol</label>
+        </div>
+        <div class="invalid-feedback">
+            Please provide a valid input.
+        </div>
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input required type="text" name="shares" class="form-control" id="floatingInput" placeholder="Shares">
+          <label for="floatingInput">Shares</label>
+        </div>
+        <div class="invalid-feedback">
+            Please provide a valid input.
+        </div>
+        <button type="submit" class="btn btn-primary w-50 mx-auto" id="buy-button">Buy</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form id="symbol-quote-form" method="POST" action="/quote">
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input type="text" name="symbol" class="form-control" id="floatingInput" placeholder="Symbol">
+          <label for="floatingInput">Symbol</label>
+        </div>
+        <button type="submit" class="btn btn-primary w-50 mx-auto" id="quote-button">Quote</button>
+    </form>
+{% endblock %}

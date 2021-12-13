@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form class="needs-validation" novalidate id="sell-form" method="POST" action="/sell">
+        <div class="sell-select mb-3 w-50 mx-auto">
+            <select required name="symbol" class="form-select" aria-label="Default select example">
+                <option selected disabled>Symbol</option>
+                {% for stock in stocks %}
+                    <option value="{{ stock["symbol"] }}">{{ stock["symbol"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="invalid-feedback">
+            Please provide a valid input.
+        </div>
+        {{ symbol }}
+        <div class="form-floating mb-3 w-50 mx-auto">
+          <input required type="number" name="shares" class="form-control" id="floatingInput" placeholder="Shares">
+          <label for="floatingInput">Shares</label>
+        </div>
+        <div class="invalid-feedback">
+            Please provide a valid input.
+        </div>
+        <button type="submit" class="btn btn-primary w-50 mx-auto" id="sell-button">Sell</button>
+    </form>
+{% endblock %}
